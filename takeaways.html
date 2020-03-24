@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+<link rel="title icon" href="images/%3C:%3E.ico"/>
+    
+  <title> My Takeaways | GWC SIP Portfolio </title>
+
+  <style>
+    body{
+        background-color: powderblue;
+        margin-right: 200px;
+        background-image: url("images/gwx_bg.jpeg");
+        background-position: right top;
+        background-repeat: repeat-y;
+        background-size: 14%;
+    }
+    img{
+        border: black 2px solid;      
+    }
+    h1{
+        color: white;
+        size: 75%;
+        text-align: center;
+    }
+    h1, h2, h3, b{
+        font-family: 'Lobster', cursive;
+    }
+    p, nav{
+        font-family: 'Raleway', sans-serif;
+    }
+    a:link{
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover{
+        color: darkgreen;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active{
+        color: deeppink;
+        background-color: transparent;
+        text-decoration: none; 
+    }
+    a:visited{
+        color: black;
+        background-color: transparent;
+        text-decoration: none;   
+    }
+    footer{
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+    }
+      
+    * {box-sizing:border-box}
+
+    /* slideshow */
+    .slideshow-container{
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    .mySlides{
+        display: none;
+    }
+    .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next{
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover{
+        background-color: none;
+    }
+    .dot{
+        cursor:pointer;
+        height: 13px;
+        width: 13px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .fade{
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+  </style>
+    
+  <script>
+    var slideIndex = 1;
+        showSlides(slideIndex);
+      
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className += " active";
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1> My Takeaways </h1>
+  <nav>
+    <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="wk1.html"> Week 1: Scratch </a></li>
+        <li><a href="wk2.html"> Week 2: HTML, CSS & Python </a></li>
+        <li><a href="wk3.html"> Week 3: The Internet, JavaScript & Django </a></li>
+        <li><a href="wk4.html"> Week 4: Robotics </a></li>
+        <li><a href="wk5.html"> Week 5: Data Science, Algorithms & Social Networking </a> </li>
+        <li><a href="extras.html"> Extra Experiences: Field Trips and Speakers </a></li>
+        <li><a href="final.html"> My Final Project </a></li>
+    </ul>  
+  </nav>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="images/takeaways/friends.JPG" style="width: 225px; height: 350px; margin-left: 425px;">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/takeaways/annabel.JPG" style="width: 250px; height: 350px; margin-left: 425px;">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/takeaways/metrobuddies.JPG" style="width: 250px; height: 350px; margin-left: 425px;">
+    </div>
+        
+    <div class="mySlides fade">
+        <img src="images/takeaways/asleep.PNG" style="width: 350px; height: 250px; margin-left: 350px;">
+    </div>
+        
+    <div class="mySlides fade">
+        <img src="images/takeaways/forum.JPG" style="width: 350px; height: 250px; margin-left: 350px;">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="images/takeaways/lastday.JPG" style="width: 250px; height: 350px; margin-left: 425px;">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+    
+<p style="text-align: center;"> I'm going to miss my class so much! </p>
+<p style="text-align: center;"> I got to know so many amazing, intelligent, funny, creative, and inspiring girls throughout the past seven weeks of our SIP and I'll forever be grateful for the experience. Girls Who Code gave me the opportunity to expand my knowledge of technology fields and to stretch my capabilities farther than I imagined possible. Thank you, GWC. ❤️ </p>
+    
+    <footer>
+        <hr>
+        Juliana | Girls Who Code Summer 2017
+    </footer>
+</body>
